@@ -1783,8 +1783,8 @@ window.parent.getConfig(function (conf) {
                 "purchaseKey": customCtrl.purKey,
                 "travelAppForm": {
                     "policyOwner": {
-                        "firstName": ownerFirstNmInEng.value,
-                        "lastName": ownerLastNmInEng.value,
+                        "firstName": customCtrl.preSubmitTempData.ownerFirstNmInEng,
+                        "lastName": customCtrl.preSubmitTempData.ownerLastNmInEng,
                         "dob": customCtrl.transDateToBackend(customCtrl.preSubmitTempData.ownerDob),
                         "hkid": customCtrl.preSubmitTempData.ownerHKIDNum,
                         "gender": customCtrl.preSubmitTempData.ownerGender,
@@ -1844,7 +1844,7 @@ window.parent.getConfig(function (conf) {
                 customCtrl.saveFormArray.travelAppForm.coiPayMode = customCtrl.quoteData.plans[0].coiPayMode;
             }
 
-            if (customCtrl.loginData.loginArr.authToken !== null) {
+            if (customCtrl.loginData.loginArr.authToken !== null && JSON.parse(sessionStorage.clientAccountOwnership).hasCcId == 'false') {
                 customCtrl.saveFormArray.travelAppForm.requestType = 'T';
 
                 customCtrl.saveFormArray.travelAppForm.policyOwner.firstName = customCtrl.clientData.firstName;
