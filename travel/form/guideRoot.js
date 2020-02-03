@@ -1783,8 +1783,8 @@ window.parent.getConfig(function (conf) {
                 "purchaseKey": customCtrl.purKey,
                 "travelAppForm": {
                     "policyOwner": {
-                        "firstName": customCtrl.preSubmitTempData.ownerFirstNmInEng,
-                        "lastName": customCtrl.preSubmitTempData.ownerLastNmInEng,
+                        "firstName": ownerFirstNmInEng.value,
+                        "lastName": ownerLastNmInEng.value,
                         "dob": customCtrl.transDateToBackend(customCtrl.preSubmitTempData.ownerDob),
                         "hkid": customCtrl.preSubmitTempData.ownerHKIDNum,
                         "gender": customCtrl.preSubmitTempData.ownerGender,
