@@ -140,7 +140,7 @@ setTimeout(function () {
 			}
 		}
 		if (customCtrl.saveFormArrayResponse.code == 'tc4004') {
-			$('.saveAppFormErrMsg .guideFieldError').html(customCtrl.errorMsg.hkidMessage[customCtrl.formLanguage] + '(Code :' + customCtrl.purKey + ')')
+			$('.saveAppFormErrMsg .guideFieldError').html(customCtrl.errorMsg.hkidMessage[customCtrl.formLanguage] + '(Code :' + customCtrl.saveFormArrayResponse.code + '/' + customCtrl.purKey + ')')
 		}
 
 	});
